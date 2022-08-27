@@ -4,7 +4,7 @@ const refs = {
     stop: document.querySelector('[data-stop]')
 }
 
-let intervalId;
+let intervalId = null;
 
 refs.start.addEventListener('click', onStartColors);
 refs.stop.addEventListener('click', onStopColors);
