@@ -21,7 +21,7 @@ defaultDate: new Date(),
 minuteIncrement: 1,
 onClose(selectedDates) {
     if (selectedDates[0] < new Date()) {
-        Notiflix.Notify.failure('Please choose a date in the future');
+        window.alert('Please choose a date in the future');
         refs.start.disabled = true;
     } else {
         refs.start.disabled = false;
@@ -66,7 +66,6 @@ refs.start.addEventListener('click', () => {
             if (countDown <= 10000) {
             }
         } else {
-            Notiflix.Notify.success('Countdown finished');
             clearInterval(timerId);
         }
     }, 1000);
